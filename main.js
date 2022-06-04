@@ -57,12 +57,14 @@ const checkForWinner = (playerScore, compScore) => {
     if(playerScore === 5){
         const h2 = document.createElement('h2');
         h2.classList.add('player-won')
+        h2.style.cssText = "color:green;"
         h2.innerText = `You won ${playerScore} to ${compScore} great job beating the computer.`
         outcome.append(h2)
     }
     if (compScore === 5) {
         const h2 = document.createElement('h2');
         h2.classList.add('computer-won')
+        h2.style.cssText = "color:red;"
         h2.innerText = `You lost ${playerScore} to ${compScore} great job beating the computer.`
         outcome.append(h2)
     }
